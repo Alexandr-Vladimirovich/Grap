@@ -1,3 +1,136 @@
-//====================================================================================================
+.footer {
+	background: url("@img/background/Wave.svg") bottom center/54% no-repeat;
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 100, 30);
+}
+.footer__container {
+	display: grid;
 
-//====================================================================================================
+	grid-template: "left right" 1fr / 1fr 1fr;
+}
+.footer__info {
+	grid-area: left;
+}
+.footer__form {
+	grid-area: right;
+	justify-self: start;
+}
+.top-footer {
+	&__title {
+		margin-bottom: 20px;
+		line-height: 15px;
+		color: #adadad;
+	}
+
+	&__sp {
+		font-size: 32px;
+		line-height: 48px;
+		color: #6c5ce7;
+		margin-bottom: 5px;
+		display: block;
+	}
+}
+.bottom-footer {
+	&__title {
+		margin-bottom: 30px;
+		line-height: 15px;
+		color: #adadad;
+	}
+}
+.form {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(2, auto);
+}
+.input1 {
+	position: relative;
+	width: 270px;
+	height: 48px;
+	border-radius: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	outline: none;
+	background-color: #d3d0d0;
+	font-size: rem(18);	
+	::placeholder {
+		color: #000;
+		padding-left: 20px;
+	}
+}
+.input2 {
+	background-color: #d3d0d0;
+	width: 270px;
+	height: 48px;
+	justify-self: start;
+	border-radius: 16px;
+	outline: none;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: rem(18);
+	::placeholder {
+		color: #000;
+		padding-left: 20px;
+	}
+}
+.textarea {
+	height: 80px;
+	width: 370px;
+	background-color: #d3d0d0;
+	border-radius: 16px;
+	padding-left: 20px;
+	padding-top: 20px;
+	outline: none;
+	font-size: rem(18);
+	padding-right: 20px;
+}
+.button {
+	@extend %b4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 170px;
+	height: 80px;
+}
+.top-info {
+	&__title {
+		margin-bottom: 20px;
+		line-height: 15px;
+		color: #adadad;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__item {
+	}
+}
+.bottom-info {
+	&__title {
+		margin-bottom: 20px;
+		line-height: 15px;
+		color: #adadad;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 10px;
+		row-gap: 20px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
+}

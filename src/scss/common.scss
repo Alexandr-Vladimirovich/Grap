@@ -57,7 +57,8 @@
 	border: 1px solid $gray;
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $blueLite;
+			background-color:$purpleDark;
+			color: white;
 		}
 	}
 	&._fw {
